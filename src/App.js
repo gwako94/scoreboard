@@ -1,21 +1,23 @@
 import React from 'react';
-import Header from './Header'
-import Player from './Player'
+import Header from './components/Header'
+import Player from './components/Player'
+import AddPlayer from './components/AddPlayer'
 import './App.css';
 
 class App extends React.Component {
 	state = {
-		players: [
-		{
-			id: '1',
-			name: 'Galgallo'
-		},
-		{
-			id: '2',
-			name: 'Wako'
-		},	
-		]
-	};
+		players: []
+  };
+  
+  handleAddPlayer = (player) => {
+    let playerId = this.state.players.length
+    player.id = ++playerId
+    const players = [...this.state.players, player]
+    this.setState({
+      players
+    })
+
+  }
 
 	handleRemovePlayer = (id) => {
 		this.setState ( prevState => ({
@@ -37,6 +39,7 @@ class App extends React.Component {
 						removePlayer={this.handleRemovePlayer}
 					/>
 				)}
+        <AddPlayer addPlayer={this.handleAddPlayer}/>
 			</div>
 	);
 	}
