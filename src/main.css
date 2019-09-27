@@ -77,25 +77,6 @@ input[type=submit] {
               color 0.2s ease;
 }
 
-/* ICONS */
-
-svg {
-  width: 28px;
-  height: 19px;
-  margin-right: 5px;
-  fill: #F0F0F0;
-}
-
-.is-high-score {
-  fill: #FFC657;
-  animation: grow 0.35s ease-in-out;
-  transform-origin: 50% 50%;
-}
-
-@keyframes grow {
-  50% { transform: scale(1.4) rotate(-3deg); }
-}
-
 /* COMPONENT STYLES -------------------- */
 
 .scoreboard {
@@ -145,65 +126,6 @@ svg {
     background: none;
   }
 
-.stats,
-.stopwatch {
-  width: 170px;
-}
-
-.stats {
-  margin: 0 0 0 28px;
-  font-weight: normal;
-}
-
-  .stats td:first-child {
-    text-align: right;
-    font-weight: normal;
-    letter-spacing: 2px;
-    font-size: .7em;
-  }
-
-  .stats td:last-child {
-    text-align: left;
-  }
-
-.stopwatch {
-  padding: 15px 10px 5px 10px;
-  margin: -5px -10px -5px 10px;
-  background: #5B45B9;
-}
-
-  .stopwatch-time {
-    display: block;
-    font-family: monospace;
-    font-size: 2.15em;
-  }
-
-  .stopwatch button {
-    margin: 8px 5px;
-    background-color: #44338D;
-    border-radius: 5px;
-    padding: 7px 8px;
-    border: none;
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-shadow: none;
-    text-transform: uppercase;
-  }
-
-  .stopwatch button:hover,
-  input[type=submit]:hover {
-    background: #fff;
-    color: #44338D;
-    cursor: pointer;
-  }
-
-  .stopwatch h2 {
-    font-size: .6em;
-    margin: 0;
-    font-weight: normal;
-    letter-spacing: 2px;
-  }
 
 .counter {
   display: flex;
